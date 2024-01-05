@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'digitToText';
+  inputNumber!: number;
+  convertedText!: string;
+
+  convert() {
+    this.convertedText = this.inputNumber === undefined ? '' : this.inputNumber.toString();
+  }
 }
